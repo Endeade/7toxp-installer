@@ -21,5 +21,12 @@ namespace _7toXP_Phase1
         {
             this.Close();
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            Base1 Base1 = new Base1();
+            this.Hide();
+            Base1.ShowDialog();
+        }
     }
 }
