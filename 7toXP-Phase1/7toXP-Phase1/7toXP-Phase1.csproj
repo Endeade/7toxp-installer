@@ -61,6 +61,12 @@
     <Compile Include="Base1.Designer.cs">
       <DependentUpon>Base1.cs</DependentUpon>
     </Compile>
+    <Compile Include="BaseRestart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseRestart.Designer.cs">
+      <DependentUpon>BaseRestart.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Base1.resx">
       <DependentUpon>Base1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseRestart.resx">
+      <DependentUpon>BaseRestart.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

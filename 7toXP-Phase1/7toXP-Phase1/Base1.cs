@@ -29,34 +29,37 @@ namespace _7toXP_Phase1
 
         private void Base1_Load(object sender, EventArgs e)
         {
-            Directory.CreateDirectory("%windir%\\7toxp");
+            Directory.CreateDirectory("C:\\Windows\\7toxp");
             progressBar1.Minimum = 0;
             progressBar1.Maximum = 100;
             progressBar1.Value = 50;
             using (var client = new WebClient())
             {
-                client.DownloadFile("https://github.com/Endeade/7toxp-basepack/raw/main/ThemePatcher.exe", "%windir%\\7toxp\\themepatcher.exe");
-                client.DownloadFile("https://github.com/Endeade/7toxp-basepack/raw/main/luna-theme.zip", "%windir%\\7toxp\\luna-theme.zip");
+                client.DownloadFile("https://github.com/Endeade/7toxp-basepack/raw/main/ThemePatcher.exe", "C:\\Windows\\7toxp\\themepatcher.exe");
+                client.DownloadFile("https://github.com/Endeade/7toxp-basepack/raw/main/luna-theme.zip", "C:\\Windows\\7toxp\\luna-theme.zip");
             }
             progressBar1.Value = 75;
-            ZipFile.ExtractToDirectory("%windir%\\7toxp\\luna-theme.zip", "%windir%\\7toxp\\");
+            ZipFile.ExtractToDirectory("C:\\Windows\\7toxp\\luna-theme.zip", "C:\\Windows\\7toxp\\");
             progressBar1.Value = 80;
-            Process.Start("%windir%\\7toxp\\themepatcher.exe");
+            Process.Start("C:\\Windows\\7toxp\\themepatcher.exe");
             progressBar1.Value = 90;
-            Directory.CreateDirectory("%windir%\\Resources\\Themes\\Luna");
-            Directory.CreateDirectory("%windir%\\Resources\\Themes\\Luna\\en-US");
-            Directory.CreateDirectory("%windir%\\Resources\\Themes\\Luna\\Shell");
-            Directory.CreateDirectory("%windir%\\Resources\\Themes\\Luna\\Shell\\NormalColor");
-            Directory.CreateDirectory("%windir%\\Resources\\Themes\\Luna\\Shell\\NormalColor\\en-US");
+            Directory.CreateDirectory("C:\\Windows\\Resources\\Themes\\Luna");
+            Directory.CreateDirectory("C:\\Windows\\Resources\\Themes\\Luna\\en-US");
+            Directory.CreateDirectory("C:\\Windows\\Resources\\Themes\\Luna\\Shell");
+            Directory.CreateDirectory("C:\\Windows\\Resources\\Themes\\Luna\\Shell\\NormalColor");
+            Directory.CreateDirectory("C:\\Windows\\Resources\\Themes\\Luna\\Shell\\NormalColor\\en-US");
             progressBar1.Value = 95;
-            File.Copy("%windir%\\7toxp\\luna-theme\\Luna\\en-US\\luna.msstyles.mui", "%windir%\\Resources\\Themes\\Luna\\en-US\\luna.msstyles.mui");
-            File.Copy("%windir%\\7toxp\\luna-theme\\Luna\\Shell\\NormalColor\\shellstyle.dll", "%windir%\\Resources\\Themes\\Luna\\Shell\\NormalColor\\shellstyle.dll");
-            File.Copy("%windir%\\7toxp\\luna-theme\\Luna\\Shell\\NormalColor\\en-US\\shellstyle.dll.mui", "%windir%\\Resources\\Themes\\Luna\\Shell\\NormalColor\\en-US\\shellstyle.dll.mui");
-            File.Copy("%windir%\\7toxp\\luna-theme\\Luna\\blisshd.jpg", "%windir%\\Resources\\Themes\\Luna\\blisshd.jpg");
-            File.Copy("%windir%\\7toxp\\luna-theme\\Luna\\Luna.msstyles", "%windir%\\Resources\\Themes\\Luna\\Luna.msstyles");
-            File.Copy("%windir%\\7toxp\\luna-theme\\Luna\\Thumbs.db", "%windir%\\Resources\\Themes\\Luna\\Thumbs.db");
-            File.Copy("%windir%\\7toxp\\luna-theme\\Luna.theme", "%windir%\\Resources\\Themes\\Luna.theme");
+            File.Copy("C:\\Windows\\7toxp\\luna-theme\\Luna\\en-US\\luna.msstyles.mui", "C:\\Windows\\Resources\\Themes\\Luna\\en-US\\luna.msstyles.mui");
+            File.Copy("C:\\Windows\\7toxp\\luna-theme\\Luna\\Shell\\NormalColor\\shellstyle.dll", "C:\\Windows\\Resources\\Themes\\Luna\\Shell\\NormalColor\\shellstyle.dll");
+            File.Copy("C:\\Windows\\7toxp\\luna-theme\\Luna\\Shell\\NormalColor\\en-US\\shellstyle.dll.mui", "C:\\Windows\\Resources\\Themes\\Luna\\Shell\\NormalColor\\en-US\\shellstyle.dll.mui");
+            File.Copy("C:\\Windows\\7toxp\\luna-theme\\Luna\\blisshd.jpg", "C:\\Windows\\Resources\\Themes\\Luna\\blisshd.jpg");
+            File.Copy("C:\\Windows\\7toxp\\luna-theme\\Luna\\Luna.msstyles", "C:\\Windows\\Resources\\Themes\\Luna\\Luna.msstyles");
+            File.Copy("C:\\Windows\\7toxp\\luna-theme\\Luna\\Thumbs.db", "C:\\Windows\\Resources\\Themes\\Luna\\Thumbs.db");
+            File.Copy("C:\\Windows\\7toxp\\luna-theme\\Luna.theme", "C:\\Windows\\Resources\\Themes\\Luna.theme");
             progressBar1.Value = 100;
+            BaseRestart BaseRestart = new BaseRestart();
+            this.Hide();
+            BaseRestart.ShowDialog();
 
         }
     }
