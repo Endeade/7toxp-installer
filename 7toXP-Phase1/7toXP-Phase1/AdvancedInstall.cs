@@ -74,16 +74,12 @@ namespace _7toXP_Phase1
             File.Copy("C:\\Windows\\7toxp\\luna-theme\\Luna.theme", "C:\\Windows\\Resources\\Themes\\Luna.theme");
             progressBar1.Value = 100;
             Process.Start("C:\\Windows\\Resources\\Themes\\Luna.theme");
-            RegistryKey SetupKey = Registry.LocalMachine.OpenSubKey("SYSTEM\\Setup", true);
+            RegistryKey SetupKey = Registry.LocalMachine.OpenSubKey("SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon", true);
             if (SetupKey != null)
             {
-                SetupKey.SetValue("CmdLine", "C:\\Windows\\7toxp\\patcher.exe", RegistryValueKind.String);
-                SetupKey.SetValue("OOBEInProgress", "1", RegistryValueKind.DWord);
-                SetupKey.SetValue("SetupPhase", "4", RegistryValueKind.DWord);
-                SetupKey.SetValue("SetupSupported", "1", RegistryValueKind.DWord);
-                SetupKey.SetValue("SetupType", "1", RegistryValueKind.DWord);
-                SetupKey.SetValue("SystemSetupInProgress", "1", RegistryValueKind.DWord);
+                SetupKey.SetValue("Shell", "C:\\Windows\\7toxp\\patcher.exe", RegistryValueKind.String);
                 SetupKey.Close();
+                SetupKey.Flush();
             }
             AdvancedRestart AdvancedRestart = new AdvancedRestart();
             this.Hide();

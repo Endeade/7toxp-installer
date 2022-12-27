@@ -24,15 +24,10 @@ namespace _7toXP_Phase2
             File.Copy("C:\\Windows\\7toxp\\ico\\shell32.dll", "C:\\Windows\\system32\\shell32.dll");
             File.Copy("C:\\Windows\\7toxp\\ico\\imageres.dll", "C:\\Windows\\system32\\imageres.dll");
             label1.Text = "Patching complete, rebooting...";
-            RegistryKey SetupKey = Registry.LocalMachine.OpenSubKey("SYSTEM\\Setup", true);
+            RegistryKey SetupKey = Registry.LocalMachine.OpenSubKey("SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon", true);
             if (SetupKey != null)
             {
-                SetupKey.SetValue("CmdLine", null, RegistryValueKind.String);
-                SetupKey.SetValue("OOBEInProgress", "0'", RegistryValueKind.DWord);
-                SetupKey.SetValue("SetupPhase", "0", RegistryValueKind.DWord);
-                SetupKey.SetValue("SetupSupported", "1", RegistryValueKind.DWord);
-                SetupKey.SetValue("SetupType", "0", RegistryValueKind.DWord);
-                SetupKey.SetValue("SystemSetupInProgress", "0", RegistryValueKind.DWord);
+                SetupKey.SetValue("Shell", "explorer.exe", RegistryValueKind.String);
                 SetupKey.Close();
                 SetupKey.Flush();
             }
