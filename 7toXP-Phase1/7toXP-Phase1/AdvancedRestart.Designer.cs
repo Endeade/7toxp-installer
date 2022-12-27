@@ -97,6 +97,7 @@
             this.Name = "AdvancedRestart";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "7toXP Installer - Full install";
             this.ResumeLayout(false);
             this.PerformLayout();
