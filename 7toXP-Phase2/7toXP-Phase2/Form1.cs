@@ -21,6 +21,8 @@ namespace _7toXP_Phase2
 
         private void patching()
         {
+            File.Copy("C:\\Windows\\system32\\shell32.dll", "C:\\Windows\\system32\\shell32.dll.old");
+            File.Copy("C:\\Windows\\system32\\imageres.dll", "C:\\Windows\\system32\\imageres.dll.old");
             File.Copy("C:\\Windows\\7toxp\\ico\\shell32.dll", "C:\\Windows\\system32\\shell32.dll");
             File.Copy("C:\\Windows\\7toxp\\ico\\imageres.dll", "C:\\Windows\\system32\\imageres.dll");
             label1.Text = "Patching complete, rebooting...";
