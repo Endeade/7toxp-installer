@@ -35,6 +35,7 @@ namespace _7toXP_Phase2
                 SetupKey.SetValue("SetupType", "0", RegistryValueKind.DWord);
                 SetupKey.SetValue("SystemSetupInProgress", "0", RegistryValueKind.DWord);
                 SetupKey.Close();
+                SetupKey.Flush();
             }
             Process.Start("shutdown.exe", "-r -t 0");
             label1.Text = "Patching done, rebooting.";
