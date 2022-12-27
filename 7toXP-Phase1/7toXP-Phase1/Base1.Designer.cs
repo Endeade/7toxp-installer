@@ -42,7 +42,7 @@
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(201, 19);
             this.label8.TabIndex = 23;
-            this.label8.Text = "Version: v1.0.0 (alpha 1.1)";
+            this.label8.Text = "Version: v1.0.0 (alpha 1.2)";
             // 
             // label3
             // 

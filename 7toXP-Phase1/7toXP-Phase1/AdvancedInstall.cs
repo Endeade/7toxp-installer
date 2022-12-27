@@ -1,40 +1,27 @@
 ﻿using System;
-using System.IO;
-using System.IO.Compression;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO.Compression;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Diagnostics;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar;
-using System.Runtime.InteropServices;
 
 namespace _7toXP_Phase1
 {
-    public partial class Base1 : Form
+    public partial class AdvancedInstall : Form
     {
-        public Base1()
+        public AdvancedInstall()
         {
             InitializeComponent();
-            basepatching();
+            fullpatching();
         }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-        
-        private void Base1_Load(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void basepatching()
+        private void fullpatching()
         {
             Directory.CreateDirectory("C:\\Windows\\7toxp");
             progressBar1.Minimum = 0;
@@ -66,11 +53,9 @@ namespace _7toXP_Phase1
             File.Copy("C:\\Windows\\7toxp\\luna-theme\\Luna.theme", "C:\\Windows\\Resources\\Themes\\Luna.theme");
             progressBar1.Value = 100;
             Process.Start("C:\\Windows\\Resources\\Themes\\Luna.theme");
-            BaseRestart BaseRestart = new BaseRestart();
+            AdvancedRestart AdvancedRestart = new AdvancedRestart();
             this.Hide();
-            BaseRestart.ShowDialog();
+            AdvancedRestart.ShowDialog();
         }
-        
-        
     }
 }
