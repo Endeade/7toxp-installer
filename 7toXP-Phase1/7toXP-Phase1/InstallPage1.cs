@@ -25,14 +25,14 @@ namespace _7toXP_Phase1
         private void label4_Click(object sender, EventArgs e)
         {
             Base1 Base1 = new Base1();
-            this.Hide();
+            Hide();
             Base1.ShowDialog();
         }
 
         private void label7_Click(object sender, EventArgs e)
         {
             AdvancedInstall AdvancedInstall = new AdvancedInstall();
-            this.Hide();
+            Hide();
             AdvancedInstall.ShowDialog();
         }
     }

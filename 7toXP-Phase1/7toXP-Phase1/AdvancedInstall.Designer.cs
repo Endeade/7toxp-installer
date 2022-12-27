@@ -88,6 +88,7 @@
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Text = "7toXP Installer - Full install";
+            this.Load += new System.EventHandler(this.AdvancedInstall_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

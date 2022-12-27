@@ -21,7 +21,6 @@ namespace _7toXP_Phase1
         public Base1()
         {
             InitializeComponent();
-            basepatching();
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -31,7 +30,7 @@ namespace _7toXP_Phase1
         
         private void Base1_Load(object sender, EventArgs e)
         {
-            
+            basepatching();
         }
 
         private void basepatching()

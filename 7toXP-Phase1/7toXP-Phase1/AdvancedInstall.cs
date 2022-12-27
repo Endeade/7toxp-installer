@@ -19,8 +19,12 @@ namespace _7toXP_Phase1
         public AdvancedInstall()
         {
             InitializeComponent();
+        }
+        private void AdvancedInstall_Load(object sender, EventArgs e)
+        {
             fullpatching();
         }
+
         private void fullpatching()
         {
             Directory.CreateDirectory("C:\\Windows\\7toxp");
@@ -57,5 +61,7 @@ namespace _7toXP_Phase1
             this.Hide();
             AdvancedRestart.ShowDialog();
         }
+
+
     }
 }
