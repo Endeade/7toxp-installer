@@ -21,10 +21,11 @@ namespace _7toXP_Phase1
         public AdvancedInstall()
         {
             InitializeComponent();
+            fullpatching();
         }
         private void AdvancedInstall_Load(object sender, EventArgs e)
         {
-            fullpatching();
+            
         }
 
         private void fullpatching()
