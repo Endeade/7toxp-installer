@@ -53,6 +53,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.Text = "Patching...";
+            this.TopMost = true;
             this.ResumeLayout(false);
             this.PerformLayout();
 
