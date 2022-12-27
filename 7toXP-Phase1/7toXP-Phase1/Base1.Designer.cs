@@ -37,18 +37,22 @@
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label8.Location = new System.Drawing.Point(12, 572);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(215, 19);
+            this.label8.Size = new System.Drawing.Size(201, 19);
             this.label8.TabIndex = 23;
-            this.label8.Text = "Version: v1.0.0 (alpha 1.2.2)";
+            this.label8.Text = "Version: v1.0.0 (alpha 1.3)";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(267, 72);
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label3.Location = new System.Drawing.Point(287, 125);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(252, 19);
             this.label3.TabIndex = 18;
@@ -58,7 +62,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(112, 19);
@@ -76,6 +82,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::_7toXP_Phase1.Properties.Resources.bg;
             this.ClientSize = new System.Drawing.Size(800, 600);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.label8);
