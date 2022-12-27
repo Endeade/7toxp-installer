@@ -21,19 +21,22 @@ namespace _7toXP_Phase2
 
         private void patching()
         {
-            File.Copy("C:\\Windows\\system32\\shell32.dll", "C:\\Windows\\system32\\shell32.dll.old");
-            File.Copy("C:\\Windows\\system32\\imageres.dll", "C:\\Windows\\system32\\imageres.dll.old");
             File.Copy("C:\\Windows\\7toxp\\ico\\shell32.dll", "C:\\Windows\\system32\\shell32.dll");
             File.Copy("C:\\Windows\\7toxp\\ico\\imageres.dll", "C:\\Windows\\system32\\imageres.dll");
             label1.Text = "Patching complete, rebooting...";
-            RegistryKey SetupKey = Registry.LocalMachine.OpenSubKey("SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon", true);
+            RegistryKey SetupKey = Registry.LocalMachine.OpenSubKey("SYSTEM\\Setup", true);
             if (SetupKey != null)
             {
-                SetupKey.SetValue("Shell", "explorer.exe", RegistryValueKind.String);
+                SetupKey.SetValue("CmdLine", "C:\\Windows\\system32\\LogonUI.exe", RegistryValueKind.String);
+                SetupKey.SetValue("OOBEInProgress", 0x0000000, RegistryValueKind.DWord);
+                SetupKey.SetValue("RestartSetup", 0x0000000, RegistryValueKind.DWord);
+                SetupKey.SetValue("SetupPhase", 0x0000000, RegistryValueKind.DWord);
+                SetupKey.SetValue("SetupType", 0x0000000, RegistryValueKind.DWord);
+                SetupKey.SetValue("SystemSetupInProgress", 0x0000000, RegistryValueKind.DWord);
                 SetupKey.Close();
                 SetupKey.Flush();
             }
-            Process.Start("shutdown.exe", "-r -t 0");
+            Process.Start("shutdown.exe", "-r -t 0"); 
 
         }
     }
