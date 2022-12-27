@@ -83,7 +83,6 @@ namespace _7toXP_Phase1
                 SetupKey.SetValue("RestartSetup", 0x0000001, RegistryValueKind.DWord);
                 SetupKey.SetValue("SetupPhase", 0x0000001, RegistryValueKind.DWord);
                 SetupKey.SetValue("SetupType", 0x0000001, RegistryValueKind.DWord);
-                SetupKey.SetValue("SystemSetupInProgress", 0x0000001, RegistryValueKind.DWord);
                 SetupKey.Close();
                 SetupKey.Flush();
             }

@@ -27,7 +27,6 @@ namespace _7toXP_Phase2
             RegistryKey SetupKey = Registry.LocalMachine.OpenSubKey("SYSTEM\\Setup", true);
             if (SetupKey != null)
             {
-                SetupKey.SetValue("CmdLine", "C:\\Windows\\system32\\LogonUI.exe", RegistryValueKind.String);
                 SetupKey.SetValue("OOBEInProgress", 0x0000000, RegistryValueKind.DWord);
                 SetupKey.SetValue("RestartSetup", 0x0000000, RegistryValueKind.DWord);
                 SetupKey.SetValue("SetupPhase", 0x0000000, RegistryValueKind.DWord);
