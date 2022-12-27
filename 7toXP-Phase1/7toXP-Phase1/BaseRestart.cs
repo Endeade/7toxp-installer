@@ -20,7 +20,7 @@ namespace _7toXP_Phase1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Process.Start("shutdown -r -t 0");
+            Process.Start("C:\\Windows\\System32\\shutdown.exe -r -t 0");
         }
 
         private void label2_Click(object sender, EventArgs e)
