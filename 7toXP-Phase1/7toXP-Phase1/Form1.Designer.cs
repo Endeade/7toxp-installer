@@ -118,9 +118,9 @@
             this.label9.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(12, 572);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(201, 19);
+            this.label9.Size = new System.Drawing.Size(215, 19);
             this.label9.TabIndex = 16;
-            this.label9.Text = "Version: v1.0.0 (alpha 1.2)";
+            this.label9.Text = "Version: v1.0.0 (alpha 1.2.2)";
             // 
             // Form1
             // 

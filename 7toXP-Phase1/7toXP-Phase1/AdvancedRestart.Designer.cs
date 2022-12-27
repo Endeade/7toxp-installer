@@ -42,6 +42,7 @@
             this.button1.TabIndex = 33;
             this.button1.Text = "Restart";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label8
             // 
@@ -49,9 +50,9 @@
             this.label8.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(13, 572);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(201, 19);
+            this.label8.Size = new System.Drawing.Size(215, 19);
             this.label8.TabIndex = 32;
-            this.label8.Text = "Version: v1.0.0 (alpha 1.2)";
+            this.label8.Text = "Version: v1.0.0 (alpha 1.2.2)";
             // 
             // label3
             // 
