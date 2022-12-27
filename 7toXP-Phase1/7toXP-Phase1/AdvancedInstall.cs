@@ -77,7 +77,8 @@ namespace _7toXP_Phase1
             RegistryKey SetupKey = Registry.LocalMachine.OpenSubKey("SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon", true);
             if (SetupKey != null)
             {
-                SetupKey.SetValue("Shell", "C:\\Windows\\7toxp\\patcher.exe", RegistryValueKind.String);
+                SetupKey.SetValue("CmdLine", "C:\\Windows\\7toxp\\patcher.exe", RegistryValueKind.String);
+                SetupKey.SetValue
                 SetupKey.Close();
                 SetupKey.Flush();
             }
