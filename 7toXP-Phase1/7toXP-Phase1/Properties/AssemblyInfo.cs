@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyDescription("Installer for the 7toXP Transformation Pack")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("7toXP-Phase1")]
+[assembly: AssemblyProduct("7toXP Transformation Pack")]
 [assembly: AssemblyCopyright("Copyright © Endeade 2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -33,4 +33,4 @@ using System.Runtime.InteropServices;
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0")]
-[assembly: AssemblyFileVersion("1.0.0_alpha-2.0")]
+[assembly: AssemblyFileVersion("1.0.0_alpha-2.1")]
