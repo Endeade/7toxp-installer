@@ -21,13 +21,11 @@ namespace _7toXP_Phase2
 
         private void patching()
         {
-            File.Copy("C:\\Windows\\7toxp\\ico\\shell32.dll", "C:\\Windows\\system32\\shell32.dll");
-            File.Copy("C:\\Windows\\7toxp\\ico\\imageres.dll", "C:\\Windows\\system32\\imageres.dll");
+            Process.Start("C:\\Windows\\7toxp\\rh.exe", "-open C:\\Windows\\system32\\shell32.dll -resource C:\\Windows\\7toxp\\IcGr1.res -action addoverwrite -log NUL -mask ICONGROUP,1,");
             label1.Text = "Patching complete, rebooting...";
             RegistryKey SetupKey = Registry.LocalMachine.OpenSubKey("SYSTEM\\Setup", true);
             if (SetupKey != null)
             {
-                SetupKey.SetValue("OOBEInProgress", 0x0000000, RegistryValueKind.DWord);
                 SetupKey.SetValue("RestartSetup", 0x0000000, RegistryValueKind.DWord);
                 SetupKey.SetValue("SetupPhase", 0x0000000, RegistryValueKind.DWord);
                 SetupKey.SetValue("SetupType", 0x0000000, RegistryValueKind.DWord);
@@ -35,7 +33,7 @@ namespace _7toXP_Phase2
                 SetupKey.Close();
                 SetupKey.Flush();
             }
-            Process.Start("shutdown.exe", "-r -t 0"); 
+            Process.Start("shutdown.exe", "-r -t 0");
 
         }
     }

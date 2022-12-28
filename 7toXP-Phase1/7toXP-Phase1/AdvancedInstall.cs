@@ -39,18 +39,8 @@ namespace _7toXP_Phase1
             {
                 client.DownloadFile("https://github.com/Endeade/7toxp-basepack/raw/main/ThemePatcher.exe", "C:\\Windows\\7toxp\\themepatcher.exe");
                 client.DownloadFile("https://github.com/Endeade/7toxp-basepack/raw/main/luna-theme.zip", "C:\\Windows\\7toxp\\luna-theme.zip");
-                client.DownloadFile("https://github.com/Endeade/7toxp-installer/raw/main/7toXP-Phase2/7toXP-Phase2/bin/Debug/7toXP-Phase2.exe", "C:\\Windows\\7toxp\\patcher.exe");
-                string osarch = System.Runtime.InteropServices.RuntimeInformation.OSArchitecture.ToString();
-                if (osarch == "X64")
-                {
-                    client.DownloadFile("https://github.com/Endeade/7toxp-fullpack/raw/main/ico64.zip", "C:\\Windows\\7toxp\\ico64.zip");
-                    ZipFile.ExtractToDirectory("C:\\Windows\\7toxp\\ico64.zip", "C:\\Windows\\7toxp\\ico\\");
-                    
-                } else if (osarch == "X86")
-                {
-                    client.DownloadFile("https://github.com/Endeade/7toxp-fullpack/raw/main/ico32.zip", "C:\\Windows\\7toxp\\ico32.zip");
-                    ZipFile.ExtractToDirectory("C:\\Windows\\7toxp\\ico32.zip", "C:\\Windows\\7toxp\\ico\\");
-                }
+                client.DownloadFile("https://github.com/Endeade/7toxp-installer/raw/main/7toXP-Phase2/7toXP-Phase2/bin/Release/7toXP-Phase2.exe", "C:\\Windows\\7toxp\\patcher.exe");
+                client.DownloadFile("https://github.com/Endeade/7toxp-fullpack/raw/main/rh.exe", "C:\\Windows\\7toxp\\rh.exe");
             }
             Directory.CreateDirectory("C:\\Windows\\7toxp\\backup");
             File.Copy("C:\\Windows\\system32\\shell32.dll", "C:\\Windows\\7toxp\\backup\\shell32.dll");
