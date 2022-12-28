@@ -139,5 +139,17 @@
   <ItemGroup>
     <None Include="Resources\bg.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bitmap104.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EmptyRadioButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FilledRadioButton.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
