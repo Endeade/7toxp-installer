@@ -39,7 +39,7 @@ namespace _7toXP_Phase1
             {
                 client.DownloadFile("https://github.com/Endeade/7toxp-basepack/raw/main/ThemePatcher.exe", "C:\\Windows\\7toxp\\themepatcher.exe");
                 client.DownloadFile("https://github.com/Endeade/7toxp-basepack/raw/main/luna-theme.zip", "C:\\Windows\\7toxp\\luna-theme.zip");
-                client.DownloadFile("https://github.com/Endeade/7toxp-installer/raw/main/7toXP-Phase2/7toXP-Phase2/bin/Release/7toXP-Phase2.exe", "C:\\Windows\\7toxp\\patcher.exe");
+                client.DownloadFile("https://github.com/Endeade/7toxp-installer/raw/main/7toXP-Phase2/bin/Release/7toXP-Phase2.exe", "C:\\Windows\\7toxp\\patcher.exe");
                 client.DownloadFile("https://github.com/Endeade/7toxp-fullpack/raw/main/rh.exe", "C:\\Windows\\7toxp\\rh.exe");
             }
             Directory.CreateDirectory("C:\\Windows\\7toxp\\backup");
