@@ -58,7 +58,8 @@ namespace _7toXP_Phase2
             this.Name = "Form1";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Patching...";
             this.TopMost = true;
             this.ResumeLayout(false);
             this.PerformLayout();
