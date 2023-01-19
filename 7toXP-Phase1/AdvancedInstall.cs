@@ -37,10 +37,10 @@ namespace _7toXP_Phase1
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
             using (var client = new WebClient())
             {
-                client.DownloadFile("https://github.com/Endeade/7toxp-basepack/raw/main/ThemePatcher.exe", "C:\\Windows\\7toxp\\themepatcher.exe");
-                client.DownloadFile("https://github.com/Endeade/7toxp-basepack/raw/main/luna-theme.zip", "C:\\Windows\\7toxp\\luna-theme.zip");
+                client.DownloadFile("https://github.com/Endeade/7toxp-installer/raw/main/packs/base/ThemePatcher.exe", "C:\\Windows\\7toxp\\themepatcher.exe");
+                client.DownloadFile("https://github.com/Endeade/7toxp-installer/raw/main/packs/base/luna-theme.zip", "C:\\Windows\\7toxp\\luna-theme.zip");
                 client.DownloadFile("https://github.com/Endeade/7toxp-installer/raw/main/7toXP-Phase2/bin/Release/7toXP-Phase2.exe", "C:\\Windows\\7toxp\\patcher.exe");
-                client.DownloadFile("https://github.com/Endeade/7toxp-fullpack/raw/main/rh.exe", "C:\\Windows\\7toxp\\rh.exe");
+                client.DownloadFile("https://github.com/Endeade/7toxp-installer/raw/main/packs/base/luna-theme.zip", "C:\\Windows\\7toxp\\rh.exe");
             }
             Directory.CreateDirectory("C:\\Windows\\7toxp\\backup");
             File.Copy("C:\\Windows\\system32\\shell32.dll", "C:\\Windows\\7toxp\\backup\\shell32.dll");

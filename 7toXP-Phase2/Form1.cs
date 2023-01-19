@@ -21,8 +21,8 @@ namespace _7toXP_Phase2
 
         private void patching()
         {
-            Process.Start("C:\\Windows\\7toxp\\rh.exe", "-open C:\\Windows\\7toxp\\backup\\shell32.dll -save C:\\Windows\\system32\\shell32.dll -resource C:\\Windows\\7toxp\\IcGr1.res -action addoverwrite -log NUL -mask ICONGROUP,1,");
-            label1.Text = "Patching complete, rebooting...";
+            Process.Start("C:\\Windows\\7toxp\\iconpack.exe");
+            label1.Text = "Please use the patcher that opened to apply icons, after icons are applied, click on the button.";
             RegistryKey SetupKey = Registry.LocalMachine.OpenSubKey("SYSTEM\\Setup", true);
             if (SetupKey != null)
             {
@@ -34,8 +34,13 @@ namespace _7toXP_Phase2
                 SetupKey.Close();
                 SetupKey.Flush();
             }
-            Process.Start("shutdown.exe", "-r -t 0");
 
+            
+
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Process.Start("shutdown.exe", "-r -t 0");
         }
     }
 }

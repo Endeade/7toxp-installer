@@ -73,9 +73,9 @@
             this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label9.Location = new System.Drawing.Point(12, 572);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(201, 19);
+            this.label9.Size = new System.Drawing.Size(193, 19);
             this.label9.TabIndex = 16;
-            this.label9.Text = "Version: v1.0.0 (alpha 2.1)";
+            this.label9.Text = "Version: v1.0.0 (beta 1.0)";
             // 
             // label4
             // 
