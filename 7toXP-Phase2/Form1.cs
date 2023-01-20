@@ -17,12 +17,20 @@ namespace _7toXP_Phase2
         {
             InitializeComponent();
             patching();
+            checkBox1.Checked = true;
+            checkBox2.Checked = true;
+            checkBox3.Checked = true;
+            checkBox4.Checked = true;
+            checkBox1.AutoCheck = false;
+            checkBox2.AutoCheck = false;
+            checkBox3.AutoCheck = false;
+            checkBox4.AutoCheck = false;
+            checkBox5.AutoCheck = false;
         }
 
         private void patching()
         {
             Process.Start("C:\\Windows\\7toxp\\iconpack.exe");
-            label1.Text = "Please use the patcher that opened to apply icons, after icons are applied, click on the button.";
             RegistryKey SetupKey = Registry.LocalMachine.OpenSubKey("SYSTEM\\Setup", true);
             if (SetupKey != null)
             {
@@ -38,6 +46,7 @@ namespace _7toXP_Phase2
             
 
         }
+
         private void button1_Click(object sender, EventArgs e)
         {
             Process.Start("shutdown.exe", "-r -t 0");

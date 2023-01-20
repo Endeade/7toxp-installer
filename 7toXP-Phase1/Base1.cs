@@ -23,14 +23,18 @@ namespace _7toXP_Phase1
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
         
         private void Base1_Load(object sender, EventArgs e)
         {
             basepatching();
+            checkBox1.Checked = true;
+            checkBox2.Checked = true;
+            checkBox3.Checked = true;
+            checkBox1.AutoCheck = false;
+            checkBox2.AutoCheck = false;
+            checkBox3.AutoCheck = false;
+            checkBox4.AutoCheck = false;
+            checkBox5.AutoCheck = false;
         }
 
         private void basepatching()

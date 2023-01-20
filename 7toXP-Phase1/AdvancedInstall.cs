@@ -22,10 +22,19 @@ namespace _7toXP_Phase1
         {
             InitializeComponent();
             fullpatching();
+
         }
         private void AdvancedInstall_Load(object sender, EventArgs e)
         {
-            
+            InitializeComponent();
+            checkBox1.Checked = true;
+            checkBox2.Checked = true;
+            checkBox3.Checked = true;
+            checkBox1.AutoCheck = false;
+            checkBox2.AutoCheck = false;
+            checkBox3.AutoCheck = false;
+            checkBox4.AutoCheck = false;
+            checkBox5.AutoCheck = false;
         }
 
         private void fullpatching()

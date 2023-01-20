@@ -17,20 +17,37 @@ namespace _7toXP_Phase1
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            checkBox1.Checked = true;
+            checkBox2.Checked = true;
+            checkBox1.AutoCheck = false;
+            checkBox2.AutoCheck = false;
+            checkBox3.AutoCheck = false;
+            checkBox4.AutoCheck = false;
+            checkBox5.AutoCheck = false;
+
+        }
+        
+        private void button1_MouseHover(object sender, EventArgs e)
+        {
+            label1.Text = "Choosing this option will install the 7toXP TP";
+        }
+        private void button2_MouseHover(object sender, EventArgs e)
+        {
+            label1.Text = "Choosing this option will uninstall the 7toXP TP";
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             InstallPage1 InstallPage1 = new InstallPage1();
-            this.Hide();
+            Hide();
             InstallPage1.ShowDialog();
         }
     }

@@ -15,25 +15,33 @@ namespace _7toXP_Phase1
         public InstallPage1()
         {
             InitializeComponent();
+            checkBox1.Checked = true;
+            checkBox2.Checked = true;
+            checkBox1.AutoCheck = false;
+            checkBox2.AutoCheck = false;
+            checkBox3.AutoCheck = false;
+            checkBox4.AutoCheck = false;
+            checkBox5.AutoCheck = false;
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             Base1 Base1 = new Base1();
             Hide();
             Base1.ShowDialog();
         }
 
-        private void label7_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
             AdvancedInstall AdvancedInstall = new AdvancedInstall();
             Hide();
             AdvancedInstall.ShowDialog();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
