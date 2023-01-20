@@ -23,11 +23,6 @@ namespace _7toXP_Phase1
             Process.Start("shutdown.exe", "-r -t 0");
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void BaseRestart_Load(object sender, EventArgs e)
         {
             checkBox1.Checked = true;

@@ -17,7 +17,6 @@ namespace _7toXP_Phase1
             InitializeComponent();
         }
 
-
         private void Form1_Load(object sender, EventArgs e)
         {
             checkBox1.Checked = true;
