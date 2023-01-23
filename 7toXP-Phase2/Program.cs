@@ -36,12 +36,24 @@ namespace _7toXP_Phase2
                 }
                 else
                 {
-                    TaskDialog.Show(text: "You must be running atleast Windows 7 build 7600 or 7601 in order to install 7toXP TP.",
+                    RegistryKey SetupKey = Registry.LocalMachine.OpenSubKey("SYSTEM\\Setup", true);
+                    if (SetupKey != null)
+                    {
+                        SetupKey.SetValue("CmdLine", "cmd.exe", RegistryValueKind.String);
+                        SetupKey.SetValue("OOBEInProgress", 0x0000000, RegistryValueKind.DWord);
+                        SetupKey.SetValue("RestartSetup", 0x0000000, RegistryValueKind.DWord);
+                        SetupKey.SetValue("SetupPhase", 0x0000000, RegistryValueKind.DWord);
+                        SetupKey.SetValue("SetupType", 0x0000000, RegistryValueKind.DWord);
+                        SetupKey.Close();
+                        SetupKey.Flush();
+                    }
+                    TaskDialog.Show(text: "You must be running atleast Windows 7 build 7600 or 7601 in order to install 7toXP TP. Setup will now revert the registry changes, your OS may not be fully transformed.",
                     instruction: "Compatibility error",
                     title: "7toXP Setup",
                     buttons: TaskDialogButtons.OK,
                     icon: TaskDialogStandardIcon.SecurityErrorRedBar);
                     return;
+                    Process.Start("shutdown.exe", "-r -t 0");
                 }
             }
         }
