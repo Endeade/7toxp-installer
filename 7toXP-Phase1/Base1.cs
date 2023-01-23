@@ -43,15 +43,8 @@ namespace _7toXP_Phase1
             progressBar1.Minimum = 0;
             progressBar1.Maximum = 100;
             progressBar1.Value = 25;
-            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
-            using (var client = new WebClient())
-            {
-                client.DownloadFile("https://github.com/Endeade/7toxp-installer/raw/main/packs/base/ThemePatcher.exe", "C:\\Windows\\7toxp\\themepatcher.exe");
-                client.DownloadFile("https://github.com/Endeade/7toxp-installer/raw/main/packs/base/luna-theme.zip", "C:\\Windows\\7toxp\\luna-theme.zip");
-            }
-            progressBar1.Value = 50;
             ZipFile.ExtractToDirectory("C:\\Windows\\7toxp\\luna-theme.zip", "C:\\Windows\\7toxp\\");
-            progressBar1.Value = 70;
+            progressBar1.Value = 50;
             Process.Start("C:\\Windows\\7toxp\\themepatcher.exe");
             progressBar1.Value = 80;
             Directory.CreateDirectory("C:\\Windows\\Resources\\Themes\\Luna");

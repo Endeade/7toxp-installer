@@ -24,24 +24,23 @@ namespace _7toXP_Phase1
             checkBox5.AutoCheck = false;
         }
 
-
-        private void button1_Click(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Base1 Base1 = new Base1();
-            Hide();
-            Base1.ShowDialog();
+            this.Close();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click_1(object sender, EventArgs e)
         {
             AdvancedInstall AdvancedInstall = new AdvancedInstall();
             Hide();
             AdvancedInstall.ShowDialog();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
-            this.Close();
+            Base1 Base1 = new Base1();
+            Hide();
+            Base1.ShowDialog();
         }
     }
 }

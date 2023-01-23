@@ -39,21 +39,9 @@ namespace _7toXP_Phase1
 
         private void fullpatching()
         {
-            Directory.CreateDirectory("C:\\Windows\\7toxp");
             progressBar1.Minimum = 0;
             progressBar1.Maximum = 100;
             progressBar1.Value = 25;
-            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
-            using (var client = new WebClient())
-            {
-                client.DownloadFile("https://github.com/Endeade/7toxp-installer/raw/main/packs/base/ThemePatcher.exe", "C:\\Windows\\7toxp\\themepatcher.exe");
-                client.DownloadFile("https://github.com/Endeade/7toxp-installer/raw/main/packs/base/luna-theme.zip", "C:\\Windows\\7toxp\\luna-theme.zip");
-                client.DownloadFile("https://github.com/Endeade/7toxp-installer/raw/main/7toXP-Phase2/bin/Release/7toXP-Phase2.exe", "C:\\Windows\\7toxp\\patcher.exe");
-                client.DownloadFile("https://github.com/Endeade/7toxp-installer/raw/main/packs/base/luna-theme.zip", "C:\\Windows\\7toxp\\rh.exe");
-            }
-            Directory.CreateDirectory("C:\\Windows\\7toxp\\backup");
-            File.Copy("C:\\Windows\\system32\\shell32.dll", "C:\\Windows\\7toxp\\backup\\shell32.dll");
-            File.Copy("C:\\Windows\\system32\\imageres.dll", "C:\\Windows\\7toxp\\backup\\imageres.dll");
             progressBar1.Value = 50;
             ZipFile.ExtractToDirectory("C:\\Windows\\7toxp\\luna-theme.zip", "C:\\Windows\\7toxp\\");
             progressBar1.Value = 70;
@@ -77,19 +65,30 @@ namespace _7toXP_Phase1
             RegistryKey SetupKey = Registry.LocalMachine.OpenSubKey("SYSTEM\\Setup", true);
             if (SetupKey != null)
             {
-                SetupKey.SetValue("CmdLine", "C:\\Windows\\7toxp\\patcher.exe", RegistryValueKind.String);
-                SetupKey.SetValue("OOBEInProgress", 0x0000001, RegistryValueKind.DWord);
-                SetupKey.SetValue("RestartSetup", 0x0000001, RegistryValueKind.DWord);
-                SetupKey.SetValue("SetupPhase", 0x0000001, RegistryValueKind.DWord);
-                SetupKey.SetValue("SetupType", 0x0000001, RegistryValueKind.DWord);
-                SetupKey.Close();
-                SetupKey.Flush();
+                if (Environment.OSVersion.Version.Build < 7600 || Environment.OSVersion.Version.Build > 7601)
+                {
+                    SetupKey.SetValue("CmdLine", "C:\\Windows\\7toxp\\patcher.exe", RegistryValueKind.String);
+                    SetupKey.SetValue("OOBEInProgress", 0x0000001, RegistryValueKind.DWord);
+                    SetupKey.SetValue("RestartSetup", 0x0000001, RegistryValueKind.DWord);
+                    SetupKey.SetValue("SetupPhase", 0x0000001, RegistryValueKind.DWord);
+                    SetupKey.SetValue("SetupType", 0x0000001, RegistryValueKind.DWord);
+                    SetupKey.Close();
+                    SetupKey.Flush();
+                }
+                else
+                {
+                    SetupKey.SetValue("CmdLine", "C:\\Windows\\7toxp\\patcher.exe -allow", RegistryValueKind.String);
+                    SetupKey.SetValue("OOBEInProgress", 0x0000001, RegistryValueKind.DWord);
+                    SetupKey.SetValue("RestartSetup", 0x0000001, RegistryValueKind.DWord);
+                    SetupKey.SetValue("SetupPhase", 0x0000001, RegistryValueKind.DWord);
+                    SetupKey.SetValue("SetupType", 0x0000001, RegistryValueKind.DWord);
+                    SetupKey.Close();
+                    SetupKey.Flush();
+                }
             }
             AdvancedRestart AdvancedRestart = new AdvancedRestart();
             this.Hide();
             AdvancedRestart.ShowDialog();
         }
-
-
     }
 }

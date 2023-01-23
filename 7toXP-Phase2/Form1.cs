@@ -8,6 +8,10 @@ using System.Windows.Forms;
 using System.IO;
 using Microsoft.Win32;
 using System.Diagnostics;
+using static System.Environment;
+using System.Runtime;
+using System.Threading;
+using KPreisser.UI;
 
 namespace _7toXP_Phase2
 {
@@ -16,7 +20,6 @@ namespace _7toXP_Phase2
         public Form1()
         {
             InitializeComponent();
-            patching();
             checkBox1.Checked = true;
             checkBox2.Checked = true;
             checkBox3.Checked = true;
@@ -26,6 +29,8 @@ namespace _7toXP_Phase2
             checkBox3.AutoCheck = false;
             checkBox4.AutoCheck = false;
             checkBox5.AutoCheck = false;
+            patching();
+            
         }
 
         private void patching()

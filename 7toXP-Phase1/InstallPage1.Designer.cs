@@ -129,6 +129,7 @@
             this.button2.TabIndex = 44;
             this.button2.Text = "Install 7toXP advanced (full) pack";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // button1
             // 
@@ -139,6 +140,7 @@
             this.button1.TabIndex = 43;
             this.button1.Text = "Install 7toXP base pack";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // checkBox5
             // 
