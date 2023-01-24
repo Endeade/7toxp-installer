@@ -216,7 +216,7 @@
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(291, 19);
             this.label9.TabIndex = 47;
-            this.label9.Text = "Version: v1.0.0 (Release Candidate 1.1)";
+            this.label9.Text = "Version: v1.0.0 (Release Candidate 1.2)";
             // 
             // InstallPage1
             // 

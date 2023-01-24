@@ -52,8 +52,8 @@ namespace _7toXP_Phase2
                     title: "7toXP Setup",
                     buttons: TaskDialogButtons.OK,
                     icon: TaskDialogStandardIcon.SecurityErrorRedBar);
-                    return;
                     Process.Start("shutdown.exe", "-r -t 0");
+                    return;
                 }
             }
         }

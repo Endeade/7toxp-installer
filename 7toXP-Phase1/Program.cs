@@ -32,16 +32,7 @@ namespace _7toXP_Phase1
 			{
 				if (args.Length != 0 && args[0].ToLower() == "-allow")
 				{
-					Directory.Delete("C:\\Windows\\7toxp");
-					Directory.CreateDirectory("C:\\Windows\\7toxp");
-					ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
-					using (var client = new WebClient())
-					{
-						client.DownloadFile("https://github.com/Endeade/7toxp-installer/raw/main/packs/base/ThemePatcher.exe", "C:\\Windows\\7toxp\\themepatcher.exe");
-						client.DownloadFile("https://github.com/Endeade/7toxp-installer/raw/main/packs/base/luna-theme.zip", "C:\\Windows\\7toxp\\luna-theme.zip");
-						client.DownloadFile("https://github.com/Endeade/7toxp-installer/raw/main/7toXP-Phase2/bin/Release/7toXP-Phase2.exe", "C:\\Windows\\7toxp\\patcher.exe");
-						client.DownloadFile("https://github.com/Endeade/7toxp-installer/raw/main/packs/base/luna-theme.zip", "C:\\Windows\\7toxp\\rh.exe");
-					}
+					
 					Application.Run(new Form1());
 				}
 				else
