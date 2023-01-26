@@ -47,12 +47,11 @@ namespace _7toXP_Phase2
                         SetupKey.Close();
                         SetupKey.Flush();
                     }
-                    TaskDialog.Show(text: "You must be running atleast Windows 7 build 7600 or 7601 in order to install 7toXP TP. Setup will now revert the registry changes, your OS may not be fully transformed.",
-                    instruction: "Compatibility error",
-                    title: "7toXP Setup",
+                    TaskDialog.Show(text: "You must be running at least Windows 10 build 21343 or higher in order to install Rectify11.",
+                    instruction: "Compatibility Error",
+                    title: "Rectify11 Setup",
                     buttons: TaskDialogButtons.OK,
                     icon: TaskDialogStandardIcon.SecurityErrorRedBar);
-                    Process.Start("shutdown.exe", "-r -t 0");
                     return;
                 }
             }
